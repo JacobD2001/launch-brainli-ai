@@ -17,7 +17,7 @@ export const Process = () => {
   ];
 
   return (
-    <div className="py-24 bg-[#0A0A0F]/50">
+    <div className="py-24 bg-black/50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">
           From Idea to Launch in Weeks
@@ -26,11 +26,11 @@ export const Process = () => {
           {steps.map((step, index) => (
             <div key={index} className="flex items-start mb-12 last:mb-0 animate-fade-up" style={{ animationDelay: `${index * 100}ms` }}>
               <div className="mr-4">
-                <CheckCircle className="h-6 w-6 text-primary" />
+                <CheckCircle className="h-6 w-6 text-[#2A4BEE]" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                <p className="text-gray-400">{step.description}</p>
+                <p className="text-white/70">{step.description}</p>
               </div>
             </div>
           ))}
