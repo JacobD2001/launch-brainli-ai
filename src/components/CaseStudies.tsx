@@ -3,22 +3,22 @@ import { useInView } from "react-intersection-observer";
 
 const caseStudies = [
   {
-    title: "AI Content Generator",
-    description: "An AI-powered platform that generates high-quality marketing content in seconds.",
-    image: "/placeholder.svg",
-    tags: ["OpenAI", "React", "Node.js"],
+    title: "AI meeting companion",
+    description: "AI-powered meeting companion that do comprehensive research on the prospect.",
+    image: "/case-study-meetings.svg",
+    tags: ["OpenAI", "React", "Deepgram", "Elevenlabs"],
   },
   {
-    title: "Smart Analytics Dashboard",
-    description: "Real-time AI analytics platform for e-commerce businesses.",
-    image: "/placeholder.svg",
-    tags: ["Machine Learning", "Python", "React"],
+    title: "Law Office Lead Qualifier",
+    description: "Real-time AI powered lead qualifier and data scraper for legal services.",
+    image: "/case-study-law.svg",
+    tags: ["OpenAI", "Python", "Langchain", "Google Cloud"],
   },
   {
-    title: "AI Customer Service Bot",
-    description: "Intelligent chatbot that handles customer inquiries 24/7.",
-    image: "/placeholder.svg",
-    tags: ["NLP", "Python", "AWS"],
+    title: "Lawyer AI Assistant",
+    description: "AI-powered lawyer assistant for legal services, making legal research easy.",
+    image: "/case-study-legal-rag.svg",
+    tags: ["llamaindex", "Python", "Railway", "Next.js"],
   },
 ];
 
@@ -36,7 +36,7 @@ export const CaseStudies = () => {
           }`}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-6">
-            Featured Work
+            See how we have helped others like you
           </h2>
         </div>
         <div 

@@ -13,7 +13,7 @@ export const Process = () => {
     {
       icon: <Code2 className="h-6 w-6 text-[#EE2B6C]" />,
       title: "Rapid Development",
-      description: "Our team builds your MVP using cutting-edge AI technologies.",
+      description: "Our team brings your idea to life using cutting-edge AI technologies.",
     },
     {
       icon: <Rocket className="h-6 w-6 text-[#EE2B6C]" />,
