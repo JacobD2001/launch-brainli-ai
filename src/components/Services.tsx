@@ -26,14 +26,8 @@ export const Services = () => {
           Building the Future of AI Products
         </h2>
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-lg text-white/80 mb-4">
+          <p className="text-lg text-white/80">
             We exclusively focus on rapid development of AI-powered products, helping entrepreneurs and businesses capitalize on the AI revolution.
-          </p>
-          <p className="text-white/70">
-            ✓ Launch your MVP in weeks, not months<br />
-            ✓ Start generating revenue faster<br />
-            ✓ Validate your AI product with real users<br />
-            ✓ Scale with confidence using our proven process
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

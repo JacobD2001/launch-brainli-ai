@@ -8,8 +8,12 @@ export const Hero = () => {
       <div className="absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       <div className="container relative z-10 mx-auto px-4 animate-fade-up">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#EE2B6C] to-[#2A4BEE] mb-6">
-            Turn Your AI Ideas Into
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Turn your{" "}
+            <span className="bg-clip-text text-transparent bg-[#EE2B6C] animate-pulse">
+              AI Ideas
+            </span>{" "}
+            into
             <br />
             Revenue-Generating Products
           </h1>
@@ -34,9 +38,6 @@ export const Hero = () => {
               <FileText className="mr-2 h-4 w-4" /> Share Your Vision
             </Button>
           </div>
-          <p className="text-white/60 text-sm mb-4">
-            No commitment required. Let's explore your idea together.
-          </p>
           <div className="inline-block bg-[#EE2B6C]/10 border border-[#EE2B6C]/20 rounded-full px-4 py-1">
             <p className="text-sm text-[#EE2B6C]">
               🔥 Limited Availability: Only 3 spots left for December
