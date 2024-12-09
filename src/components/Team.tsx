@@ -15,8 +15,8 @@ export const Team = () => {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="relative w-64 h-64 flex-shrink-0">
-                <div className="absolute inset-0 rounded-lg border-2 border-[#EE2B6C] animate-[spin_8s_linear_infinite]" />
-                <div className="absolute inset-[2px] rounded-lg overflow-hidden bg-black">
+                <div className="absolute inset-0 rounded-full border-2 border-[#EE2B6C] animate-[spin_8s_linear_infinite]" />
+                <div className="absolute inset-[2px] rounded-full overflow-hidden bg-black">
                   <img
                     src="/lovable-uploads/4a5a736b-3177-4e17-974c-59acd17131cb.png"
                     alt="Profile"
