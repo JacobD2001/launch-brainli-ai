@@ -30,7 +30,7 @@ export const Process = () => {
           className={`transition-all duration-700 transform ${titleInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">
-            From Idea to Launch in Weeks
+            From <span className="text-[#EE2B6C]">Idea</span> to <span className="text-[#EE2B6C]">Launch</span> in Weeks
           </h2>
         </div>
         <div className="max-w-4xl mx-auto">

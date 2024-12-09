@@ -28,7 +28,7 @@ export const Services = () => {
       <div className="container mx-auto px-4">
         <div ref={titleRef} className={`transition-all duration-700 transform ${titleInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-6">
-            Building the Future of AI Products
+            Building the Future of <span className="text-[#EE2B6C]">AI</span> Products
           </h2>
         </div>
         <div ref={descRef} className={`max-w-3xl mx-auto text-center mb-16 transition-all duration-700 delay-200 transform ${descInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
