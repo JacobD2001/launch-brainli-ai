@@ -48,10 +48,8 @@ export const Hero = () => {
   }, []);
 
   const handleVisionShare = () => {
-    // Track the event in Formbricks
-    formbricks.track("vision_share_clicked");
-    // Open the Formbricks form
-    formbricks.track("share_vision_form");
+    // Track the event in Formbricks with the correct action name
+    formbricks.track("share_vision_clicked");
   };
 
   return (
