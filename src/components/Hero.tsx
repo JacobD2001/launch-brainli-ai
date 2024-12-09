@@ -1,7 +1,27 @@
 import { Calendar, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 export const Hero = () => {
+  const [text, setText] = useState("");
+  const fullText = "Turn your AI Ideas into Revenue-Generating Products";
+  const [isComplete, setIsComplete] = useState(false);
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const interval = setInterval(() => {
+      if (currentIndex <= fullText.length) {
+        setText(fullText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        setIsComplete(true);
+        clearInterval(interval);
+      }
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-black">
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
@@ -9,13 +29,12 @@ export const Hero = () => {
       <div className="container relative z-10 mx-auto px-4 animate-fade-up">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Turn your{" "}
-            <span className="bg-clip-text text-transparent bg-[#EE2B6C] animate-pulse">
-              AI Ideas
-            </span>{" "}
-            into
-            <br />
-            Revenue-Generating Products
+            {text.split(" ").map((word, index) => (
+              <span key={index} className={word === "AI" ? "bg-clip-text text-transparent bg-[#EE2B6C] animate-pulse" : "text-white"}>
+                {word}{" "}
+              </span>
+            ))}
+            {!isComplete && <span className="animate-pulse">|</span>}
           </h1>
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             We build AI-powered MVPs and micro-SaaS products in weeks, not months.
