@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 export const Hero = () => {
   const [text, setText] = useState("");
-  const fullText = "Turn your AI Ideas into Revenue-Generating Products";
+  const fullText = "AI Ideas";
   const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
@@ -29,12 +29,12 @@ export const Hero = () => {
       <div className="container relative z-10 mx-auto px-4 animate-fade-up">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            {text.split(" ").map((word, index) => (
-              <span key={index} className={word === "AI" ? "bg-clip-text text-transparent bg-[#EE2B6C] animate-pulse" : "text-white"}>
-                {word}{" "}
-              </span>
-            ))}
-            {!isComplete && <span className="animate-pulse">|</span>}
+            Turn your{" "}
+            <span className="text-[#EE2B6C]">
+              {text}
+              {!isComplete && <span className="animate-pulse">|</span>}
+            </span>{" "}
+            into Revenue-Generating Products
           </h1>
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             We build AI-powered MVPs and micro-SaaS products in weeks, not months.
