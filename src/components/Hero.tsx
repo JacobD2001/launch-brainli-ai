@@ -9,18 +9,32 @@ export const Hero = () => {
   const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
-    let currentIndex = 0;
-    const interval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setText(fullText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        setIsComplete(true);
-        clearInterval(interval);
-      }
-    }, 150);
+    const startTyping = () => {
+      let currentIndex = 0;
+      setIsComplete(false);
+      
+      const typingInterval = setInterval(() => {
+        if (currentIndex <= fullText.length) {
+          setText(fullText.slice(0, currentIndex));
+          currentIndex++;
+        } else {
+          clearInterval(typingInterval);
+          setIsComplete(true);
+          
+          // Wait 3 seconds before restarting
+          setTimeout(() => {
+            setText("");
+            startTyping();
+          }, 3000);
+        }
+      }, 150);
 
-    return () => clearInterval(interval);
+      return () => {
+        clearInterval(typingInterval);
+      };
+    };
+
+    startTyping();
   }, []);
 
   return (
