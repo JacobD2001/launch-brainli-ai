@@ -56,7 +56,7 @@ export const CaseStudies = () => {
               <div
                 key={index}
                 ref={ref}
-                className={`bg-white/[0.02] border border-white/10 rounded-lg overflow-hidden hover:border-[#2A4BEE]/50 transition-all duration-700 transform ${
+                className={`bg-white/[0.02] border border-white/10 rounded-lg overflow-hidden hover:border-[#EE2B6C]/50 hover:bg-gradient-to-br hover:from-white/5 hover:to-[#EE2B6C]/5 transition-all duration-700 transform ${
                   inView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                 }`}
                 style={{ transitionDelay: `${index * 200}ms` }}

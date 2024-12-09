@@ -25,15 +25,20 @@ export const CTA = () => {
         <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
           Let's turn your idea into a revenue-generating AI product. Schedule a free consultation now.
         </p>
-        <Button 
-          size="lg"
-          className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white"
-          data-cal-namespace="free-ai-audit-implement-ai-in-your-business"
-          data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
-          data-cal-config='{"layout":"month_view"}'
-        >
-          <Calendar className="mr-2 h-4 w-4" /> Book Your Free Consultation
-        </Button>
+        <div className="flex flex-col items-center gap-4">
+          <Button 
+            size="lg"
+            className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white"
+            data-cal-namespace="free-ai-audit-implement-ai-in-your-business"
+            data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
+            data-cal-config='{"layout":"month_view"}'
+          >
+            <Calendar className="mr-2 h-4 w-4" /> Book Your Free Consultation
+          </Button>
+          <p className="text-sm text-white/50">
+            No commitment required. Let's explore your idea together.
+          </p>
+        </div>
       </div>
     </div>
   );
