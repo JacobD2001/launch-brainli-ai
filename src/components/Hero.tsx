@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { Calendar, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
@@ -17,9 +17,31 @@ export const Hero = () => {
             We build AI-powered MVPs and micro-SaaS products in weeks, not months.
             Transform your vision into reality with our rapid development approach.
           </p>
-          <Button size="lg" className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white">
-            Start Your Project <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+            <Button 
+              size="lg" 
+              className="bg-[#2A4BEE] hover:bg-[#2A4BEE]/90 text-white w-full sm:w-auto"
+              onClick={() => window.open('https://calendly.com/example', '_blank')}
+            >
+              <Calendar className="mr-2 h-4 w-4" /> Book a Call
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white/20 hover:bg-white/5 text-white w-full sm:w-auto"
+              onClick={() => window.open('https://forms.example.com/vision', '_blank')}
+            >
+              <FileText className="mr-2 h-4 w-4" /> Share Your Vision
+            </Button>
+          </div>
+          <p className="text-white/60 text-sm mb-4">
+            No commitment required. Let's explore your idea together.
+          </p>
+          <div className="inline-block bg-[#EE2B6C]/10 border border-[#EE2B6C]/20 rounded-full px-4 py-1">
+            <p className="text-sm text-[#EE2B6C]">
+              🔥 Limited Availability: Only 3 spots left for December
+            </p>
+          </div>
         </div>
       </div>
     </div>
