@@ -54,7 +54,7 @@ export const Hero = () => {
             into Revenue-Generating Products
           </h1>
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            We build AI-powered MVPs and micro-SaaS products in weeks, not months.
+            Build AI-powered MVPs and micro-SaaS products in weeks, not months.
             Transform your vision into reality with our rapid development approach.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
