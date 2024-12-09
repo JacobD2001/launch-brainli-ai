@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Navigation } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { useCalendar } from "@/hooks/useCalendar";
 
@@ -39,8 +39,7 @@ export const Navbar = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center">
-              <Navigation className="h-8 w-8 text-[#EE2B6C]" />
-              <span className="ml-2 text-xl font-bold">microai-lab</span>
+              <img src="/logo.svg" alt="microai-lab" className="h-8" />
             </div>
 
             <div className="hidden md:flex items-center space-x-8">
@@ -88,7 +87,6 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile menu with fixed positioning */}
       {isOpen && (
         <div className="md:hidden fixed top-20 left-0 right-0 z-40 bg-black/95 backdrop-blur-sm border-t border-white/10 animate-fade-in">
           <div className="container mx-auto px-4 py-4">
