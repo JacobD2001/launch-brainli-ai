@@ -1,5 +1,5 @@
 import { useInView } from "react-intersection-observer";
-import { Linkedin, Twitter, Youtube } from "lucide-react";
+import { Linkedin, X, Youtube } from "lucide-react";
 
 export const Team = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -41,7 +41,7 @@ export const Team = () => {
                     rel="noopener noreferrer"
                     className="text-white/60 hover:text-[#EE2B6C] transition-colors"
                   >
-                    <Twitter className="w-5 h-5" />
+                    <X className="w-5 h-5" />
                   </a>
                   <a
                     href="https://www.youtube.com/@JacobDzikowski"
