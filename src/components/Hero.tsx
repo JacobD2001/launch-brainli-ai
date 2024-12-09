@@ -3,27 +3,14 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { ParticleBackground } from "./ParticleBackground";
 import { useCalendar } from "@/hooks/useCalendar";
-import formbricks from "@formbricks/js";
 
 export const Hero = () => {
   const [text, setText] = useState("");
   const fullText = "AI Ideas";
   const [isComplete, setIsComplete] = useState(false);
-  const [isFormbricksInitialized, setIsFormbricksInitialized] = useState(false);
   useCalendar();
 
   useEffect(() => {
-    // Initialize Formbricks
-    if (typeof window !== "undefined") {
-      formbricks.init({
-        environmentId: "cm34z4dt4000614d8npgmypp6",
-        apiHost: "https://app.formbricks.com",
-        debug: true, // Enable debug mode to see what's happening
-      });
-      setIsFormbricksInitialized(true);
-      console.log("Formbricks initialized");
-    }
-
     const startTyping = () => {
       let currentIndex = 0;
       setIsComplete(false);
@@ -50,21 +37,6 @@ export const Hero = () => {
 
     startTyping();
   }, []);
-
-  const handleVisionClick = async () => {
-    if (!isFormbricksInitialized) {
-      console.error("Formbricks not initialized yet");
-      return;
-    }
-    
-    console.log("Tracking share_vision_clicked event");
-    try {
-      await formbricks.track("share_vision_clicked");
-      console.log("Successfully tracked share_vision_clicked event");
-    } catch (error) {
-      console.error("Error tracking event:", error);
-    }
-  };
 
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-black pt-20">
@@ -99,7 +71,7 @@ export const Hero = () => {
               size="lg" 
               variant="outline" 
               className="border-white/20 hover:bg-white/5 text-white w-full sm:w-auto"
-              onClick={handleVisionClick}
+              onClick={() => window.open('https://forms.example.com/vision', '_blank')}
             >
               <FileText className="mr-2 h-4 w-4" /> Share Your Vision
             </Button>
