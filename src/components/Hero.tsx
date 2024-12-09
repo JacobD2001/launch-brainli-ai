@@ -39,7 +39,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-black">
+    <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-black pt-20">
       <ParticleBackground />
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
       <div className="absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
@@ -47,7 +47,7 @@ export const Hero = () => {
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Turn your{" "}
-            <span className="text-[#EE2B6C]">
+            <span className="text-[#EE2B6C] inline-block min-w-[120px] md:min-w-[160px]">
               {text}
               {!isComplete && <span className="animate-pulse">|</span>}
             </span>{" "}

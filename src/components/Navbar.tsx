@@ -20,7 +20,7 @@ export const Navbar = () => {
     setIsOpen(false);
     const element = document.getElementById(id);
     if (element) {
-      const offset = 80; // Height of the navbar
+      const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -32,61 +32,66 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-black/90 backdrop-blur-sm" : "bg-transparent"
-    }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
-            <Navigation className="h-8 w-8 text-[#EE2B6C]" />
-            <span className="ml-2 text-xl font-bold">microai-lab</span>
-          </div>
+    <>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-black/90 backdrop-blur-sm" : "bg-transparent"
+      }`}>
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-20">
+            <div className="flex items-center">
+              <Navigation className="h-8 w-8 text-[#EE2B6C]" />
+              <span className="ml-2 text-xl font-bold">microai-lab</span>
+            </div>
 
-          <div className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection("services")}
-              className="text-white/80 hover:text-white transition-colors"
-            >
-              What we do
-            </button>
-            <button
-              onClick={() => scrollToSection("process")}
-              className="text-white/80 hover:text-white transition-colors"
-            >
-              How it works
-            </button>
-            <button
-              onClick={() => scrollToSection("work")}
-              className="text-white/80 hover:text-white transition-colors"
-            >
-              Our Work
-            </button>
-            <button
-              onClick={() => scrollToSection("team")}
-              className="text-white/80 hover:text-white transition-colors"
-            >
-              Team
-            </button>
-            <Button
-              className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white"
-              data-cal-namespace="free-ai-audit-implement-ai-in-your-business"
-              data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
-              data-cal-config='{"layout":"month_view"}'
-            >
-              Book A Call
-            </Button>
-          </div>
+            <div className="hidden md:flex items-center space-x-8">
+              <button
+                onClick={() => scrollToSection("services")}
+                className="text-white/80 hover:text-white transition-colors"
+              >
+                What we do
+              </button>
+              <button
+                onClick={() => scrollToSection("process")}
+                className="text-white/80 hover:text-white transition-colors"
+              >
+                How it works
+              </button>
+              <button
+                onClick={() => scrollToSection("work")}
+                className="text-white/80 hover:text-white transition-colors"
+              >
+                Our Work
+              </button>
+              <button
+                onClick={() => scrollToSection("team")}
+                className="text-white/80 hover:text-white transition-colors"
+              >
+                Team
+              </button>
+              <Button
+                className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white"
+                data-cal-namespace="free-ai-audit-implement-ai-in-your-business"
+                data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
+                data-cal-config='{"layout":"month_view"}'
+              >
+                Book A Call
+              </Button>
+            </div>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white p-2"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden text-white p-2"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
+      </nav>
 
-        {isOpen && (
-          <div className="md:hidden bg-black/95 backdrop-blur-sm absolute top-20 left-0 right-0 p-4 border-t border-white/10 animate-fade-in">
+      {/* Mobile menu with fixed positioning */}
+      {isOpen && (
+        <div className="md:hidden fixed top-20 left-0 right-0 z-40 bg-black/95 backdrop-blur-sm border-t border-white/10 animate-fade-in">
+          <div className="container mx-auto px-4 py-4">
             <div className="flex flex-col space-y-4">
               <button
                 onClick={() => scrollToSection("services")}
@@ -122,8 +127,8 @@ export const Navbar = () => {
               </Button>
             </div>
           </div>
-        )}
-      </div>
-    </nav>
+        </div>
+      )}
+    </>
   );
 };
