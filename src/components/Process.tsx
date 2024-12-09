@@ -6,7 +6,7 @@ export const Process = () => {
   
   const steps = [
     {
-      icon: <CheckCircle className="h-6 w-6 text-[#2A4BEE]" />,
+      icon: <CheckCircle className="h-6 w-6 text-[#EE2B6C]" />,
       title: "Initial Consultation",
       description: "We discuss your idea and define clear objectives for your AI product.",
     },
@@ -16,7 +16,7 @@ export const Process = () => {
       description: "Our team builds your MVP using cutting-edge AI technologies.",
     },
     {
-      icon: <Rocket className="h-6 w-6 text-[#2A4BEE]" />,
+      icon: <Rocket className="h-6 w-6 text-[#EE2B6C]" />,
       title: "Launch & Iterate",
       description: "We launch your product and help you gather user feedback for improvements.",
     },
@@ -46,13 +46,13 @@ export const Process = () => {
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 {index < steps.length - 1 && (
-                  <div className="absolute left-[27px] top-10 w-[2px] h-[calc(100%+64px)] bg-gradient-to-b from-[#2A4BEE] to-transparent" />
+                  <div className="absolute left-[27px] top-10 w-[2px] h-[calc(100%+64px)] bg-gradient-to-b from-[#EE2B6C] to-white/20" />
                 )}
                 <div className="flex-shrink-0 w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mr-6">
                   {step.icon}
                 </div>
                 <div className="flex-1 pt-2">
-                  <div className="bg-white/[0.03] border border-white/10 rounded-lg p-6 hover:border-[#2A4BEE]/50 transition-colors">
+                  <div className="bg-white/[0.03] border border-white/10 rounded-lg p-6 hover:border-[#EE2B6C]/50 hover:bg-gradient-to-br hover:from-white/5 hover:to-[#EE2B6C]/5 transition-all">
                     <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
                     <p className="text-white/70">{step.description}</p>
                   </div>

@@ -12,7 +12,7 @@ export const Services = () => {
       description: "Launch your AI product in weeks with our rapid MVP development process.",
     },
     {
-      icon: <Code className="h-8 w-8 text-[#2A4BEE]" />,
+      icon: <Code className="h-8 w-8 text-[#EE2B6C]" />,
       title: "Micro SaaS",
       description: "Build profitable AI-powered micro-SaaS products that solve specific problems.",
     },
