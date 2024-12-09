@@ -17,7 +17,7 @@ const Index = () => {
         <div id="services">
           <Services />
         </div>
-        <div id="process" className="relative bg-black z-20">
+        <div id="process" className="relative bg-black z-30">
           <Process />
         </div>
         <div id="work">
