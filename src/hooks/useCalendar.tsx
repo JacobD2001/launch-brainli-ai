@@ -4,9 +4,10 @@ import { getCalApi } from "@calcom/embed-react";
 export const useCalendar = () => {
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi();
+      const cal = await getCalApi({
+        namespace: "free-ai-audit-implement-ai-in-your-business",
+      });
       cal("ui", {
-        styles: { branding: { brandColor: "#EE2B6C" } },
         hideEventTypeDetails: false,
         layout: "month_view",
       });
