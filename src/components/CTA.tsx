@@ -20,7 +20,7 @@ export const CTA = () => {
         }`}
       >
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-          Ready to Build Your AI Product?
+          Ready to Build <span className="text-[#EE2B6C]">Your</span> AI Product?
         </h2>
         <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
           Let's turn your idea into a revenue-generating AI product. Schedule a free consultation now.
