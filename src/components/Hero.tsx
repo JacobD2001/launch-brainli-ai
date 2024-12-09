@@ -1,6 +1,7 @@
 import { Calendar, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { ParticleBackground } from "./ParticleBackground";
 
 export const Hero = () => {
   const [text, setText] = useState("");
@@ -17,13 +18,14 @@ export const Hero = () => {
         setIsComplete(true);
         clearInterval(interval);
       }
-    }, 150); // Slowed down from 50ms to 150ms
+    }, 150);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-black">
+      <ParticleBackground />
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
       <div className="absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       <div className="container relative z-10 mx-auto px-4 animate-fade-up">
