@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Navigation } from "lucide-react";
 import { Button } from "./ui/button";
+import { useCalendar } from "@/hooks/useCalendar";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  useCalendar();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,13 +37,11 @@ export const Navbar = () => {
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <div className="flex items-center">
             <Navigation className="h-8 w-8 text-[#EE2B6C]" />
             <span className="ml-2 text-xl font-bold">microai-lab</span>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("services")}
@@ -68,14 +68,15 @@ export const Navbar = () => {
               Team
             </button>
             <Button
-              onClick={() => scrollToSection("cta")}
               className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white"
+              data-cal-namespace="free-ai-audit-implement-ai-in-your-business"
+              data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
+              data-cal-config='{"layout":"month_view"}'
             >
               Book A Call
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-white p-2"
@@ -84,7 +85,6 @@ export const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden bg-black/95 backdrop-blur-sm absolute top-20 left-0 right-0 p-4 border-t border-white/10 animate-fade-in">
             <div className="flex flex-col space-y-4">
@@ -113,8 +113,10 @@ export const Navbar = () => {
                 Team
               </button>
               <Button
-                onClick={() => scrollToSection("cta")}
                 className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white w-full"
+                data-cal-namespace="free-ai-audit-implement-ai-in-your-business"
+                data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
+                data-cal-config='{"layout":"month_view"}'
               >
                 Book A Call
               </Button>

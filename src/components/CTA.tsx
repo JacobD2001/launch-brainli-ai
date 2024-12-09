@@ -1,24 +1,15 @@
 import { useEffect } from "react";
-import Cal, { getCalApi } from "@calcom/embed-react";
 import { useInView } from "react-intersection-observer";
+import { Button } from "./ui/button";
+import { Calendar } from "lucide-react";
+import { useCalendar } from "@/hooks/useCalendar";
 
 export const CTA = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  useEffect(() => {
-    (async function () {
-      const cal = await getCalApi({
-        namespace: "free-ai-audit-implement-ai-in-your-business",
-      });
-      cal("ui", {
-        hideEventTypeDetails: false,
-        layout: "month_view",
-      });
-    })();
-  }, []);
+  useCalendar();
 
   return (
     <div className="py-24 bg-black">
@@ -34,20 +25,15 @@ export const CTA = () => {
         <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
           Let's turn your idea into a revenue-generating AI product. Schedule a free consultation now.
         </p>
-        <div className="w-full max-w-4xl mx-auto h-[600px] bg-white/[0.02] rounded-lg border border-white/10 overflow-hidden">
-          <Cal
-            namespace="free-ai-audit-implement-ai-in-your-business"
-            calLink="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
-            style={{
-              width: "100%",
-              height: "100%",
-              overflow: "scroll",
-            }}
-            config={{
-              layout: "month_view",
-            }}
-          />
-        </div>
+        <Button 
+          size="lg"
+          className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white"
+          data-cal-namespace="free-ai-audit-implement-ai-in-your-business"
+          data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
+          data-cal-config='{"layout":"month_view"}'
+        >
+          <Calendar className="mr-2 h-4 w-4" /> Book Your Free Consultation
+        </Button>
       </div>
     </div>
   );

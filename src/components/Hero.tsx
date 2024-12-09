@@ -2,11 +2,13 @@ import { Calendar, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { ParticleBackground } from "./ParticleBackground";
+import { useCalendar } from "@/hooks/useCalendar";
 
 export const Hero = () => {
   const [text, setText] = useState("");
   const fullText = "AI Ideas";
   const [isComplete, setIsComplete] = useState(false);
+  useCalendar();
 
   useEffect(() => {
     const startTyping = () => {
@@ -60,7 +62,9 @@ export const Hero = () => {
             <Button 
               size="lg" 
               className="bg-[#2A4BEE] hover:bg-[#2A4BEE]/90 text-white w-full sm:w-auto"
-              onClick={() => window.open('https://calendly.com/example', '_blank')}
+              data-cal-namespace="free-ai-audit-implement-ai-in-your-business"
+              data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
+              data-cal-config='{"layout":"month_view"}'
             >
               <Calendar className="mr-2 h-4 w-4" /> Book a Call
             </Button>
