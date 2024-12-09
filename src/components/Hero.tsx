@@ -71,7 +71,7 @@ export const Hero = () => {
               size="lg" 
               variant="outline" 
               className="border-white/20 hover:bg-white/5 text-white w-full sm:w-auto"
-              onClick={() => window.open('https://forms.example.com/vision', '_blank')}
+              onClick={() => window.open('https://app.formbricks.com/s/t11dl0yfcf6as0p991dgvpag', '_blank')}
             >
               <FileText className="mr-2 h-4 w-4" /> Share Your Vision
             </Button>
