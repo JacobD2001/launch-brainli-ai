@@ -6,7 +6,7 @@ export const ParticleBackground = () => {
   useEffect(() => {
     particlesJS('particles-js', {
       particles: {
-        number: { value: 30, density: { enable: true, value_area: 800 } },
+        number: { value: 50, density: { enable: true, value_area: 800 } },
         color: { value: "#EE2B6C" },
         shape: {
           type: "circle",
@@ -32,7 +32,7 @@ export const ParticleBackground = () => {
         },
         move: {
           enable: true,
-          speed: 2,
+          speed: 3,
           direction: "none",
           random: false,
           straight: false,
@@ -60,7 +60,7 @@ export const ParticleBackground = () => {
   return (
     <div 
       id="particles-js" 
-      className="absolute inset-0 pointer-events-none"
+      className="fixed inset-0 pointer-events-none"
       style={{ zIndex: 0 }}
     />
   );
