@@ -60,7 +60,7 @@ export const ParticleBackground = () => {
   return (
     <div 
       id="particles-js" 
-      className="fixed inset-0 pointer-events-none"
+      className="absolute inset-0 pointer-events-none"
       style={{ zIndex: 1 }}
     />
   );
