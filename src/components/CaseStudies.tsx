@@ -36,7 +36,7 @@ export const CaseStudies = () => {
           }`}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-6">
-            See how we have <span className="text-[#EE2B6C]">helped</span> others like <span className="text-[#EE2B6C]">you</span>
+            See how we have <span className="text-[#EE2B6C]">Helped</span> others like <span className="text-[#EE2B6C]">You</span>
           </h2>
         </div>
         <div 
