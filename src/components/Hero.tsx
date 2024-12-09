@@ -17,7 +17,7 @@ export const Hero = () => {
         setIsComplete(true);
         clearInterval(interval);
       }
-    }, 50);
+    }, 150); // Slowed down from 50ms to 150ms
 
     return () => clearInterval(interval);
   }, []);
