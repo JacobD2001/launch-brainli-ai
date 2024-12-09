@@ -6,18 +6,38 @@ import { useCalendar } from "@/hooks/useCalendar";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   useCalendar();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      // Get all sections
+      const sections = ["services", "process", "work", "team"].map(id => ({
+        id,
+        element: document.getElementById(id),
+      }));
+
+      // Find the current section
+      const currentSection = sections.find(section => {
+        if (!section.element) return false;
+        const rect = section.element.getBoundingClientRect();
+        return rect.top <= 100 && rect.bottom >= 100;
+      });
+
+      if (currentSection) {
+        setActiveSection(currentSection.id);
+      }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (id: string) => {
     setIsOpen(false);
+    setActiveSection(id);
     const element = document.getElementById(id);
     if (element) {
       const offset = 80;
@@ -29,6 +49,14 @@ export const Navbar = () => {
         behavior: "smooth"
       });
     }
+  };
+
+  const getMenuItemClass = (id: string) => {
+    return `transition-colors ${
+      activeSection === id
+        ? "text-[#EE2B6C]"
+        : "text-white/80 hover:text-white"
+    }`;
   };
 
   return (
@@ -45,25 +73,25 @@ export const Navbar = () => {
             <div className="hidden md:flex items-center space-x-8">
               <button
                 onClick={() => scrollToSection("services")}
-                className="text-white/80 hover:text-white transition-colors"
+                className={getMenuItemClass("services")}
               >
                 What we do
               </button>
               <button
                 onClick={() => scrollToSection("process")}
-                className="text-white/80 hover:text-white transition-colors"
+                className={getMenuItemClass("process")}
               >
                 How it works
               </button>
               <button
                 onClick={() => scrollToSection("work")}
-                className="text-white/80 hover:text-white transition-colors"
+                className={getMenuItemClass("work")}
               >
                 Our Work
               </button>
               <button
                 onClick={() => scrollToSection("team")}
-                className="text-white/80 hover:text-white transition-colors"
+                className={getMenuItemClass("team")}
               >
                 Team
               </button>
@@ -93,25 +121,25 @@ export const Navbar = () => {
             <div className="flex flex-col space-y-4">
               <button
                 onClick={() => scrollToSection("services")}
-                className="text-white/80 hover:text-white transition-colors py-2"
+                className={getMenuItemClass("services")}
               >
                 What we do
               </button>
               <button
                 onClick={() => scrollToSection("process")}
-                className="text-white/80 hover:text-white transition-colors py-2"
+                className={getMenuItemClass("process")}
               >
                 How it works
               </button>
               <button
                 onClick={() => scrollToSection("work")}
-                className="text-white/80 hover:text-white transition-colors py-2"
+                className={getMenuItemClass("work")}
               >
                 Our Work
               </button>
               <button
                 onClick={() => scrollToSection("team")}
-                className="text-white/80 hover:text-white transition-colors py-2"
+                className={getMenuItemClass("team")}
               >
                 Team
               </button>
