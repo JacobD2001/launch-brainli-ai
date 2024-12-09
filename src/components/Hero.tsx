@@ -9,6 +9,7 @@ export const Hero = () => {
   const [text, setText] = useState("");
   const fullText = "AI Ideas";
   const [isComplete, setIsComplete] = useState(false);
+  const [isFormbricksInitialized, setIsFormbricksInitialized] = useState(false);
   useCalendar();
 
   useEffect(() => {
@@ -17,7 +18,10 @@ export const Hero = () => {
       formbricks.init({
         environmentId: "cm34z4dt4000614d8npgmypp6",
         apiHost: "https://app.formbricks.com",
+        debug: true, // Enable debug mode to see what's happening
       });
+      setIsFormbricksInitialized(true);
+      console.log("Formbricks initialized");
     }
 
     const startTyping = () => {
@@ -47,8 +51,19 @@ export const Hero = () => {
     startTyping();
   }, []);
 
-  const handleVisionClick = () => {
-    formbricks.track("share_vision_clicked");
+  const handleVisionClick = async () => {
+    if (!isFormbricksInitialized) {
+      console.error("Formbricks not initialized yet");
+      return;
+    }
+    
+    console.log("Tracking share_vision_clicked event");
+    try {
+      await formbricks.track("share_vision_clicked");
+      console.log("Successfully tracked share_vision_clicked event");
+    } catch (error) {
+      console.error("Error tracking event:", error);
+    }
   };
 
   return (
