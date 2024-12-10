@@ -9,8 +9,8 @@ export const CTA = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
-  useCalendar();
-
+  useCalendar(); // Initializes the calendar
+  
   return (
     <div className="py-24 bg-black">
       <div 
@@ -26,10 +26,9 @@ export const CTA = () => {
           Let's turn your idea into a revenue-generating AI product. Schedule a free consultation now.
         </p>
         <div className="flex flex-col items-center gap-4">
-          <Button 
+          <Button
             size="lg"
             className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white"
-            data-cal-namespace="free-ai-audit-implement-ai-in-your-business"
             data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
             data-cal-config='{"layout":"month_view"}'
           >

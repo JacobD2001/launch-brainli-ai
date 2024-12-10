@@ -61,7 +61,6 @@ export const Hero = () => {
             <Button 
               size="lg" 
               className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white w-full sm:w-auto"
-              data-cal-namespace="free-ai-audit-implement-ai-in-your-business"
               data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
               data-cal-config='{"layout":"month_view"}'
             >
