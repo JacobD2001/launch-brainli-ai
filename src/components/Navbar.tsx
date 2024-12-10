@@ -93,7 +93,7 @@ export const Navbar = () => {
                 onClick={() => scrollToSection("team")}
                 className={getMenuItemClass("team")}
               >
-                Team
+                About
               </button>
               <Button
                 className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white"
@@ -140,7 +140,7 @@ export const Navbar = () => {
                 onClick={() => scrollToSection("team")}
                 className={getMenuItemClass("team")}
               >
-                Team
+                About
               </button>
               <Button
                 className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white w-full"
