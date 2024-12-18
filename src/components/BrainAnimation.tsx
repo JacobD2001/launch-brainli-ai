@@ -8,7 +8,7 @@ export const BrainAnimation = () => {
     src: 'https://public.rive.app/community/runtime-files/2195-4346-brain-animation.riv',
     autoplay: true,
     stateMachines: "State Machine 1",
-    onError: () => setHasError(true)
+    onLoadError: () => setHasError(true)
   });
 
   useEffect(() => {

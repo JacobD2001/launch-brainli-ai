@@ -1,9 +1,9 @@
-import { Player } from '@dotlottie/react-player';
+import { DotLottiePlayer } from '@dotlottie/react-player';
 
 export const RocketAnimation = () => {
   return (
     <div className="w-40 h-40 mx-auto my-8">
-      <Player
+      <DotLottiePlayer
         src="/rocket.lottie"
         autoplay
         loop
