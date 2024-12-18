@@ -72,10 +72,24 @@ export default {
             opacity: "1",
           },
         },
+        "moveUpDown": {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-20px)",
+          },
+        },
+        dash: {
+          to: {
+            strokeDashoffset: "0",
+          },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
+        dash: "dash 1.5s ease-in-out infinite",
       },
     },
   },

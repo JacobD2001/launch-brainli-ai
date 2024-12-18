@@ -53,6 +53,37 @@ export const Hero = () => {
             </span>{" "}
             into Revenue-Generating Products
           </h1>
+          
+          {/* Animated Rocket */}
+          <div className="my-8 relative">
+            <svg
+              className="w-16 h-16 mx-auto animate-[moveUpDown_2s_ease-in-out_infinite]"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2L8 6H16L12 2Z"
+                fill="#EE2B6C"
+                className="animate-pulse"
+              />
+              <path
+                d="M12 22V6"
+                stroke="#2A4BEE"
+                strokeWidth="2"
+                strokeLinecap="round"
+                className="animate-dash"
+              />
+              <path
+                d="M8 6H16V14L12 20L8 14V6Z"
+                fill="#EE2B6C"
+                stroke="#2A4BEE"
+                strokeWidth="2"
+              />
+            </svg>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-t from-[#EE2B6C]/20 to-transparent rounded-full animate-pulse" />
+          </div>
+
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             Build AI-powered MVPs and micro-SaaS products in weeks, not months.
             Transform your vision into reality with our rapid development approach.
