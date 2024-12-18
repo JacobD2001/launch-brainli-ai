@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { ParticleBackground } from "./ParticleBackground";
 import { useCalendar } from "@/hooks/useCalendar";
+import Lottie from "lottie-react";
+import rocketAnimation from "../assets/rocket-animation.json";
 
 export const Hero = () => {
   const [text, setText] = useState("");
@@ -55,33 +57,14 @@ export const Hero = () => {
           </h1>
           
           {/* Animated Rocket */}
-          <div className="my-8 relative">
-            <svg
-              className="w-16 h-16 mx-auto animate-[moveUpDown_2s_ease-in-out_infinite]"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 2L8 6H16L12 2Z"
-                fill="#EE2B6C"
-                className="animate-pulse"
-              />
-              <path
-                d="M12 22V6"
-                stroke="#2A4BEE"
-                strokeWidth="2"
-                strokeLinecap="round"
-                className="animate-dash"
-              />
-              <path
-                d="M8 6H16V14L12 20L8 14V6Z"
-                fill="#EE2B6C"
-                stroke="#2A4BEE"
-                strokeWidth="2"
-              />
-            </svg>
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-t from-[#EE2B6C]/20 to-transparent rounded-full animate-pulse" />
+          <div className="my-8 relative w-32 h-32 mx-auto">
+            <Lottie
+              animationData={rocketAnimation}
+              loop={true}
+              style={{
+                filter: `drop-shadow(0 0 10px #EE2B6C)`,
+              }}
+            />
           </div>
 
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
