@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ParticleBackground } from "./ParticleBackground";
 import { useCalendar } from "@/hooks/useCalendar";
 import { BrainAnimation } from "./BrainAnimation";
+import { RocketAnimation } from "./RocketAnimation";
 
 export const Hero = () => {
   const [text, setText] = useState("");
@@ -54,6 +55,7 @@ export const Hero = () => {
             </span>{" "}
             into Revenue-Generating Products
           </h1>
+          <RocketAnimation />
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             Build AI-powered MVPs and micro-SaaS products in weeks, not months.
             Transform your vision into reality with our rapid development approach.

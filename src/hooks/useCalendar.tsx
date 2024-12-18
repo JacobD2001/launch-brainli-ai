@@ -5,7 +5,7 @@ export const useCalendar = () => {
   useEffect(() => {
     (async function () {
       const cal = await getCalApi();
-      cal("ui", {
+      cal?.("ui", {
         hideEventTypeDetails: false,
         layout: "month_view",
       });
