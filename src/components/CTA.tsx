@@ -23,7 +23,7 @@ export const CTA = () => {
           Ready to Build <span className="text-[#EE2B6C]">Your</span> AI Product?
         </h2>
         <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
-          Let's turn your idea into a revenue-generating AI product. Schedule a free consultation now.
+          Turn your idea into a revenue-generating AI product. Schedule a free consultation now.
         </p>
         <div className="flex flex-col items-center gap-4">
           <Button
@@ -35,7 +35,7 @@ export const CTA = () => {
             <Calendar className="mr-2 h-4 w-4" /> Book Your Free Consultation
           </Button>
           <p className="text-sm text-white/50">
-            No commitment required. Let's explore your idea together.
+            No commitment required. Explore your idea today.
           </p>
         </div>
       </div>

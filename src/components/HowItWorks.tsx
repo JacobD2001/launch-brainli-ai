@@ -8,22 +8,22 @@ export const HowItWorks = () => {
     {
       icon: <PhoneCall className="h-8 w-8 text-[#EE2B6C]" />,
       title: "Discovery Call",
-      description: "We dive deep into your vision and understand the core problem you're solving.",
+      description: "Understand what you want to achieve and explore your vision for success.",
     },
     {
       icon: <Target className="h-8 w-8 text-[#EE2B6C]" />,
       title: "MVP Strategy",
-      description: "Together, we identify the essential features that will validate your idea quickly.",
+      description: "Identify the essential features that will validate your idea quickly.",
     },
     {
       icon: <Rocket className="h-8 w-8 text-[#EE2B6C]" />,
       title: "Rapid Launch",
-      description: "Your MVP goes live in weeks, not months, ready to capture early users.",
+      description: "Your MVP goes live in weeks, ready to capture early users.",
     },
     {
       icon: <BarChart3 className="h-8 w-8 text-[#EE2B6C]" />,
       title: "Data-Driven Growth",
-      description: "We analyze user feedback and metrics to guide product evolution.",
+      description: "Analyze user feedback and metrics to guide product evolution.",
     },
     {
       icon: <DollarSign className="h-8 w-8 text-[#EE2B6C]" />,
@@ -42,7 +42,7 @@ export const HowItWorks = () => {
           }`}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">
-            How We Turn Your <span className="text-[#EE2B6C]">AI Ideas</span> Into <span className="text-[#EE2B6C]">Reality</span>
+            How to Turn Your <span className="text-[#EE2B6C]">AI Ideas</span> Into <span className="text-[#EE2B6C]">Reality</span>
           </h2>
         </div>
         
