@@ -14,7 +14,7 @@ export const Navbar = () => {
       setIsScrolled(window.scrollY > 20);
 
       // Get all sections
-      const sections = ["process", "work", "team"].map(id => ({
+      const sections = ["process", "work", "features", "team"].map(id => ({
         id,
         element: document.getElementById(id),
       }));
@@ -84,6 +84,12 @@ export const Navbar = () => {
                 Our Work
               </button>
               <button
+                onClick={() => scrollToSection("features")}
+                className={getMenuItemClass("features")}
+              >
+                Features
+              </button>
+              <button
                 onClick={() => scrollToSection("team")}
                 className={getMenuItemClass("team")}
               >
@@ -123,6 +129,12 @@ export const Navbar = () => {
                 className={getMenuItemClass("work")}
               >
                 Our Work
+              </button>
+              <button
+                onClick={() => scrollToSection("features")}
+                className={getMenuItemClass("features")}
+              >
+                Features
               </button>
               <button
                 onClick={() => scrollToSection("team")}
