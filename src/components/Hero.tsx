@@ -40,7 +40,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-black pt-16">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-16">
       <ParticleBackground />
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
       <div className="absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
