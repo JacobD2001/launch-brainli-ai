@@ -14,7 +14,7 @@ export const Navbar = () => {
       setIsScrolled(window.scrollY > 20);
 
       // Get all sections
-      const sections = ["services", "process", "work", "team"].map(id => ({
+      const sections = ["process", "work", "team"].map(id => ({
         id,
         element: document.getElementById(id),
       }));
@@ -72,16 +72,10 @@ export const Navbar = () => {
 
             <div className="hidden md:flex items-center space-x-8">
               <button
-                onClick={() => scrollToSection("services")}
-                className={getMenuItemClass("services")}
-              >
-                What we do
-              </button>
-              <button
                 onClick={() => scrollToSection("process")}
                 className={getMenuItemClass("process")}
               >
-                How it works
+                How it Works
               </button>
               <button
                 onClick={() => scrollToSection("work")}
@@ -119,16 +113,10 @@ export const Navbar = () => {
           <div className="container mx-auto px-4 py-4">
             <div className="flex flex-col space-y-4">
               <button
-                onClick={() => scrollToSection("services")}
-                className={getMenuItemClass("services")}
-              >
-                What we do
-              </button>
-              <button
                 onClick={() => scrollToSection("process")}
                 className={getMenuItemClass("process")}
               >
-                How it works
+                How it Works
               </button>
               <button
                 onClick={() => scrollToSection("work")}
