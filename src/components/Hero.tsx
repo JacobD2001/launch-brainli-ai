@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { ParticleBackground } from "./ParticleBackground";
 import { useCalendar } from "@/hooks/useCalendar";
-import { RocketAnimation } from "./RocketAnimation";
+// import { RocketAnimation } from "./RocketAnimation";
 
 export const Hero = () => {
   const [text, setText] = useState("");
@@ -46,42 +46,44 @@ export const Hero = () => {
       <div className="absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       <div className="container relative z-10 mx-auto px-4 animate-fade-up">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
             Turn your{" "}
-            <span className="inline-block min-w-[120px] md:min-w-[160px]">
-              AI <span className="text-[#EE2B6C]">Ideas</span>
+            <span className="inline-block min-w-[160px] md:min-w-[200px]">
+            <span className="text-[#EE2B6C]">AI</span>{" "}
+            <span className="text-[#EE2B6C]">Ideas</span>
             </span>{" "}
             into Revenue-Generating Products{" "}
-            <span className="text-[#EE2B6C] inline-block min-w-[120px]">
+            <span className="text-[#EE2B6C] inline-block min-w-[160px]">
               {text}
               {!isComplete && <span className="animate-pulse">|</span>}
             </span>
           </h1>
-          <RocketAnimation />
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+          {/* Commenting out RocketAnimation for now */}
+          {/* <RocketAnimation /> */}
+          <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-3xl mx-auto">
             Build AI-powered MVPs and micro-SaaS products in weeks, not months.
             Transform your vision into reality with our rapid development approach.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <Button 
               size="lg" 
-              className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white w-full sm:w-auto"
+              className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white w-full sm:w-auto text-lg py-6"
               data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
               data-cal-config='{"layout":"month_view"}'
             >
-              <Calendar className="mr-2 h-4 w-4" /> Book a Call
+              <Calendar className="mr-2 h-5 w-5" /> Book a Call
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white/20 hover:bg-white/5 text-white w-full sm:w-auto"
+              className="border-white/20 hover:bg-white/5 text-white w-full sm:w-auto text-lg py-6"
               onClick={() => window.open('https://app.formbricks.com/s/t11dl0yfcf6as0p991dgvpag', '_blank')}
             >
-              <FileText className="mr-2 h-4 w-4" /> Share Your Vision
+              <FileText className="mr-2 h-5 w-5" /> Share Your Vision
             </Button>
           </div>
-          <div className="inline-block bg-[#EE2B6C]/10 border border-[#EE2B6C]/20 rounded-full px-4 py-1">
-            <p className="text-sm text-[#EE2B6C]">
+          <div className="inline-block bg-[#EE2B6C]/10 border border-[#EE2B6C]/20 rounded-full px-6 py-2">
+            <p className="text-base md:text-lg text-[#EE2B6C]">
               🔥 Limited Availability: Only 3 spots left for December
             </p>
           </div>
