@@ -2,7 +2,7 @@ import { DotLottiePlayer } from '@dotlottie/react-player';
 
 export const RocketAnimation = () => {
   return (
-    <div className="w-40 h-40 mx-auto my-8">
+    <div className="w-60 h-60 mx-auto my-8">
       <DotLottiePlayer
         src="/rocket.lottie"
         autoplay
