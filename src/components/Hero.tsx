@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { ParticleBackground } from "./ParticleBackground";
 import { useCalendar } from "@/hooks/useCalendar";
+import { BrainAnimation } from "./BrainAnimation";
 
 export const Hero = () => {
   const [text, setText] = useState("");
@@ -80,6 +81,7 @@ export const Hero = () => {
               🔥 Limited Availability: Only 3 spots left for December
             </p>
           </div>
+          <BrainAnimation />
         </div>
       </div>
     </div>
