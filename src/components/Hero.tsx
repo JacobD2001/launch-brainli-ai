@@ -3,12 +3,11 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { ParticleBackground } from "./ParticleBackground";
 import { useCalendar } from "@/hooks/useCalendar";
-import { BrainAnimation } from "./BrainAnimation";
 import { RocketAnimation } from "./RocketAnimation";
 
 export const Hero = () => {
   const [text, setText] = useState("");
-  const fullText = "AI Ideas";
+  const fullText = "Fast.";
   const [isComplete, setIsComplete] = useState(false);
   useCalendar();
 
@@ -49,11 +48,14 @@ export const Hero = () => {
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Turn your{" "}
-            <span className="text-[#EE2B6C] inline-block min-w-[120px] md:min-w-[160px]">
+            <span className="inline-block min-w-[120px] md:min-w-[160px]">
+              AI <span className="text-[#EE2B6C]">Ideas</span>
+            </span>{" "}
+            into Revenue-Generating Products{" "}
+            <span className="text-[#EE2B6C] inline-block min-w-[120px]">
               {text}
               {!isComplete && <span className="animate-pulse">|</span>}
-            </span>{" "}
-            into Revenue-Generating Products
+            </span>
           </h1>
           <RocketAnimation />
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
@@ -83,7 +85,6 @@ export const Hero = () => {
               🔥 Limited Availability: Only 3 spots left for December
             </p>
           </div>
-          <BrainAnimation />
         </div>
       </div>
     </div>
