@@ -3,12 +3,19 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { ParticleBackground } from "./ParticleBackground";
 import { useCalendar } from "@/hooks/useCalendar";
+import { useRive } from '@rive-app/react-canvas';
 
 export const Hero = () => {
   const [text, setText] = useState("");
   const fullText = "AI Ideas";
   const [isComplete, setIsComplete] = useState(false);
   useCalendar();
+
+  const { RiveComponent } = useRive({
+    src: 'https://public.rive.app/community/runtime-files/2195-4346-brain-animation.riv',
+    autoplay: true,
+    stateMachines: "State Machine 1"
+  });
 
   useEffect(() => {
     const startTyping = () => {
@@ -79,6 +86,9 @@ export const Hero = () => {
             <p className="text-sm text-[#EE2B6C]">
               🔥 Limited Availability: Only 3 spots left for December
             </p>
+          </div>
+          <div className="mt-8 w-64 h-64 mx-auto">
+            <RiveComponent />
           </div>
         </div>
       </div>
