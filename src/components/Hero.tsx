@@ -3,8 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { ParticleBackground } from "./ParticleBackground";
 import { useCalendar } from "@/hooks/useCalendar";
-import Lottie from "lottie-react";
-import rocketAnimation from "../assets/rocket-animation.json";
+import { BrainAnimation } from "./BrainAnimation";
 
 export const Hero = () => {
   const [text, setText] = useState("");
@@ -55,18 +54,6 @@ export const Hero = () => {
             </span>{" "}
             into Revenue-Generating Products
           </h1>
-          
-          {/* Animated Rocket */}
-          <div className="my-8 relative w-32 h-32 mx-auto">
-            <Lottie
-              animationData={rocketAnimation}
-              loop={true}
-              style={{
-                filter: `drop-shadow(0 0 10px #EE2B6C)`,
-              }}
-            />
-          </div>
-
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             Build AI-powered MVPs and micro-SaaS products in weeks, not months.
             Transform your vision into reality with our rapid development approach.
@@ -76,6 +63,7 @@ export const Hero = () => {
               size="lg" 
               className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white w-full sm:w-auto"
               data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
+              data-cal-config='{"layout":"month_view"}'
             >
               <Calendar className="mr-2 h-4 w-4" /> Book a Call
             </Button>
@@ -93,6 +81,7 @@ export const Hero = () => {
               🔥 Limited Availability: Only 3 spots left for December
             </p>
           </div>
+          <BrainAnimation />
         </div>
       </div>
     </div>
