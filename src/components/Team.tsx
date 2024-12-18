@@ -1,5 +1,5 @@
 import { useInView } from "react-intersection-observer";
-import { Brain, Linkedin, Youtube } from "lucide-react";
+import { Linkedin, Youtube } from "lucide-react";
 
 export const Team = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -27,14 +27,6 @@ export const Team = () => {
                   </div>
                 </div>
                 <div className="flex gap-4 mt-4">
-                  <a
-                    href="https://brainli.ai/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/60 hover:text-[#EE2B6C] transition-colors"
-                  >
-                    <Brain className="w-5 h-5" />
-                  </a>
                   <a
                     href="https://www.linkedin.com/in/jakub-dzikowski/"
                     target="_blank"
@@ -72,18 +64,17 @@ export const Team = () => {
                   Meet The Founder
                 </h2>
                 <p className="text-lg text-white/80 mb-6">
-                  I'm Jakub and I believe we're in an AI revolution, and my goal
-                  is to help people with great ideas turn them into AI mini SaaS
-                  products quickly and affordably. After building Brainli and
-                  working on AI solutions across various industries, I'm now
-                  focused on bridging the gap between your vision and the
-                  technology to bring it to life.{" "}
+                  I'm Jakub, and I believe trust is the foundation of success. I
+                  build it by sharing my journey transparently—wins, losses, and
+                  lessons—on LinkedIn, X, and YouTube.{" "}
                 </p>
                 <p className="text-lg text-white/80">
-                  With my personal oversight, I ensure our dedicated team brings
-                  your AI vision to life swiftly and cost-effectively, so you
-                  can focus on your core business and leave the AI development
-                  to us.
+                  I believe we're in an AI revolution, and my goal is to help
+                  people with great ideas turn them into AI mini SaaS products
+                  quickly and affordably. After building Brainli and working on
+                  AI solutions across various industries, I'm now focused on bridging
+                  the gap between your vision and the technology to bring it to
+                  life.{" "}
                 </p>
               </div>
             </div>

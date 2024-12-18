@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { ParticleBackground } from "./ParticleBackground";
 import { useCalendar } from "@/hooks/useCalendar";
-import { BrainAnimation } from "./BrainAnimation";
 
 export const Hero = () => {
   const [text, setText] = useState("");
@@ -63,7 +62,6 @@ export const Hero = () => {
               size="lg" 
               className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white w-full sm:w-auto"
               data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
-              data-cal-config='{"layout":"month_view"}'
             >
               <Calendar className="mr-2 h-4 w-4" /> Book a Call
             </Button>
@@ -81,7 +79,6 @@ export const Hero = () => {
               🔥 Limited Availability: Only 3 spots left for December
             </p>
           </div>
-          <BrainAnimation />
         </div>
       </div>
     </div>
