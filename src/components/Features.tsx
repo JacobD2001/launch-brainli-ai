@@ -1,56 +1,62 @@
 import { useInView } from "react-intersection-observer";
-import { 
-  Sparkles, 
-  Database, 
-  CreditCard, 
-  BarChart3, 
-  Cloud, 
-  Brain 
+import {
+  Sparkles,
+  Database,
+  CreditCard,
+  BarChart3,
+  Cloud,
+  Brain,
 } from "lucide-react";
 
 const features = [
   {
     title: "Beautiful & Fast Frontend",
-    description: "Build interfaces that are responsive, stunning, and lightning fast. Your users will love the experience.",
+    description:
+      "Build interfaces that are responsive, stunning, and lightning fast. Your users will love the experience.",
     icon: Sparkles,
-    gradient: "from-pink-500 to-rose-500"
+    gradient: "from-pink-500 to-rose-500",
   },
   {
     title: "Robust Backend",
-    description: "A powerful, secure backend to manage your data, logic, and workflows efficiently.",
+    description:
+      "A powerful, secure backend to manage your data, logic, and workflows efficiently.",
     icon: Database,
-    gradient: "from-blue-500 to-indigo-500"
+    gradient: "from-blue-500 to-indigo-500",
   },
   {
     title: "Secure Payments",
-    description: "Start earning confidently with seamless payment systems, subscriptions, and checkout flows.",
+    description:
+      "Start earning confidently with seamless payment systems, subscriptions, and checkout flows.",
     icon: CreditCard,
-    gradient: "from-green-500 to-emerald-500"
+    gradient: "from-green-500 to-emerald-500",
   },
   {
     title: "Smart Analytics",
-    description: "Track user behavior and app performance to make smarter decisions and grow faster.",
+    description:
+      "Track user behavior and app performance to make smarter decisions and grow faster.",
     icon: BarChart3,
-    gradient: "from-purple-500 to-violet-500"
+    gradient: "from-purple-500 to-violet-500",
   },
   {
     title: "Scalable Deployment",
-    description: "Deploy quickly and securely to ensure your app scales as your users grow.",
+    description:
+      "Deploy quickly and securely to ensure your app scales as your users grow.",
     icon: Cloud,
-    gradient: "from-orange-500 to-amber-500"
+    gradient: "from-orange-500 to-amber-500",
   },
   {
     title: "AI-Driven Features",
-    description: "Supercharge your app with intelligent tools like advanced search and recommendations.",
+    description:
+      "AI semlessly integrated the way you wanted, making your vision come true.",
     icon: Brain,
-    gradient: "from-cyan-500 to-teal-500"
-  }
+    gradient: "from-cyan-500 to-teal-500",
+  },
 ];
 
 export const Features = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   return (
@@ -58,11 +64,12 @@ export const Features = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">
-            Everything You Need to{" "}
+            Everything <span className="text-[#EE2B6C]">You</span> Need to{" "}
             <span className="text-[#EE2B6C]">Succeed</span>
           </h2>
           <p className="text-xl text-white/80">
-            We build complete, production-ready applications with all the essential features your business needs to thrive.
+            We build complete, production-ready applications with all the
+            essential features your business needs to thrive.
           </p>
         </div>
         <div
@@ -80,7 +87,9 @@ export const Features = () => {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 h-full border border-white/10 hover:border-[#EE2B6C]/30 transition-all duration-300 group">
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.gradient} p-2.5 mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.gradient} p-2.5 mb-6 transform group-hover:scale-110 transition-transform duration-300`}
+                >
                   <feature.icon className="w-full h-full text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 group-hover:text-[#EE2B6C] transition-colors duration-300">

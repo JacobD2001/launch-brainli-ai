@@ -8,7 +8,7 @@ export const HowItWorks = () => {
     {
       icon: <PhoneCall className="h-8 w-8 text-[#EE2B6C]" />,
       title: "Discovery Call",
-      description: "Understand what you want to achieve and explore your vision for success.",
+      description: "We explore your idea and understand your needs.",
     },
     {
       icon: <Target className="h-8 w-8 text-[#EE2B6C]" />,
@@ -42,7 +42,7 @@ export const HowItWorks = () => {
           }`}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">
-            How to Turn Your <span className="text-[#EE2B6C]">AI Ideas</span> Into <span className="text-[#EE2B6C]">Reality</span>
+            How we Turn Your <span className="text-[#EE2B6C]">AI Ideas</span> Into <span className="text-[#EE2B6C]">Reality</span>
           </h2>
         </div>
         
