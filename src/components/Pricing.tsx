@@ -1,16 +1,97 @@
-import { Button } from "./ui/button";
-import { Check, Info } from "lucide-react";
-import { Card } from "./ui/card";
 import { useCalendar } from "@/hooks/useCalendar";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "./ui/tooltip";
+import { PricingTier } from "./pricing/PricingTier";
 
 export const Pricing = () => {
   useCalendar();
+
+  const tiers = [
+    {
+      title: "AI SaaS MVP Sprint",
+      description: "Bring your AI idea to reality in 3 weeks",
+      price: "Starting at $1,999",
+      originalPrice: "$2,999",
+      priceSubtext: "For Early Adopters",
+      spotText: "Only 2 Spots Left",
+      color: "primary" as const,
+      features: [
+        {
+          title: "Fully Functional MVP Development",
+          value: "$8,500 value",
+          items: [
+            { text: "Complete AI SaaS MVP built in 2-3 weeks" },
+            { text: "Web app/mobile app with modern UI" },
+            { text: "Payment, authorization & user management" },
+            { text: "Professional landing page that converts" },
+          ],
+        },
+        {
+          title: "Technical Support & Guidance",
+          value: "$5,500 value",
+          items: [
+            { text: "2-3 Weeks delivery guarantee or money back" },
+            { text: "Step-by-step launch checklist for success" },
+            { text: "1 month technical support post-launch" },
+            { text: "Strategic planning session for market entry" },
+          ],
+        },
+        {
+          title: "Our Triple Guarantee",
+          value: "Priceless",
+          items: [
+            { text: "Guaranteed working product ready for launch" },
+            { text: "2-3 weeks delivery or money back" },
+            { text: "100% satisfaction with iterative feedback" },
+          ],
+        },
+      ],
+    },
+    {
+      title: "AI SaaS Growth Accelerator",
+      description: "Launch and scale your AI SaaS with expert guidance",
+      price: "$4,999",
+      originalPrice: "$7,999",
+      priceSubtext: "For Select Ambitious Founders",
+      spotText: "Only 1 Spot Left",
+      color: "secondary" as const,
+      features: [
+        {
+          title: "Enhanced MVP Development",
+          value: "$14,000 value",
+          items: [
+            { text: "Everything in the AI SaaS MVP Sprint" },
+            { text: "Advanced AI features integration & optimization" },
+            { text: "Premium UI/UX design for better experience" },
+            { text: "Custom integrations with your tools and CRMs" },
+          ],
+        },
+        {
+          title: "Extended Support & Mentorship",
+          value: "$10,500 value",
+          items: [
+            { text: "3 months premium technical support" },
+            { 
+              text: "1-on-1 Micro-SaaS success mentorship",
+              tooltip: "Access to book strategic calls with our team (2 calls per month) to help guide your development and growth"
+            },
+            { text: "Complete business template library for launches" },
+            { 
+              text: "Access to exclusive founder community & support",
+              tooltip: "Join our small, exclusive community where founders communicate daily and help each other grow their AI SaaS businesses"
+            },
+          ],
+        },
+        {
+          title: "Our Triple Guarantee",
+          value: "Priceless",
+          items: [
+            { text: "Guaranteed working product ready for launch" },
+            { text: "2-3 weeks delivery or money back" },
+            { text: "100% satisfaction with iterative feedback" },
+          ],
+        },
+      ],
+    },
+  ];
 
   return (
     <section id="pricing" className="relative py-20 overflow-hidden bg-black">
@@ -28,189 +109,13 @@ export const Pricing = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* AI SaaS MVP Sprint Tier */}
-          <Card className="relative p-8 bg-black border border-white/10 rounded-xl hover:border-white/20 transition-all duration-300">
-            <div className="absolute -top-3 right-4 bg-primary px-4 py-1 rounded-full text-sm font-medium">
-              Only 2 Spots Left
-            </div>
-            <h3 className="text-2xl font-bold mb-2">AI SaaS MVP Sprint</h3>
-            <p className="text-lg mb-2">Bring your AI idea to reality in 3 weeks</p>
-            <div className="mb-6">
-              <span className="line-through text-gray-500 text-xl">$2,999</span>
-              <div className="text-3xl font-bold text-primary mt-1">Starting at $1,999</div>
-              <div className="text-sm text-gray-400 mt-1">For Early Adopters</div>
-            </div>
-            
-            <div className="space-y-4 mb-8">
-              <div className="pt-4 pb-2">
-                <h4 className="text-lg font-semibold mb-3 text-primary">Fully Functional MVP Development ($8,500 value)</h4>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5" />
-                  <span className="text-gray-300">Complete AI SaaS MVP built in 2-3 weeks</span>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-primary mt-0.5" />
-                  <span className="text-gray-300">Web app/mobile app with modern UI</span>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-primary mt-0.5" />
-                  <span className="text-gray-300">Payment, authorization & user management</span>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-primary mt-0.5" />
-                  <span className="text-gray-300">Professional landing page that converts</span>
-                </div>
-              </div>
-
-              <div className="pt-4 pb-2">
-                <h4 className="text-lg font-semibold mb-3 text-primary">Technical Support & Guidance ($5,500 value)</h4>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5" />
-                  <span className="text-gray-300">2-3 Weeks delivery guarantee or money back</span>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-primary mt-0.5" />
-                  <span className="text-gray-300">Step-by-step launch checklist for success</span>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-primary mt-0.5" />
-                  <span className="text-gray-300">1 month technical support post-launch</span>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-primary mt-0.5" />
-                  <span className="text-gray-300">Strategic planning session for market entry</span>
-                </div>
-              </div>
-
-              <div className="pt-4 pb-2">
-                <h4 className="text-lg font-semibold mb-3 text-primary">Our Triple Guarantee (Priceless)</h4>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5" />
-                  <span className="text-gray-300">Guaranteed working product ready for launch</span>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-primary mt-0.5" />
-                  <span className="text-gray-300">2-3 weeks delivery or money back</span>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-primary mt-0.5" />
-                  <span className="text-gray-300">100% satisfaction with iterative feedback</span>
-                </div>
-              </div>
-            </div>
-
-            <Button 
-              className="w-full bg-primary hover:bg-primary/90"
-              data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
-              data-cal-config='{"layout":"month_view"}'
-            >
-              Book Your Strategy Call
-            </Button>
-          </Card>
-
-          {/* AI SaaS Growth Accelerator Tier */}
-          <Card className="relative p-8 bg-gradient-to-b from-black to-secondary/10 border border-white/20 rounded-xl hover:border-white/30 transition-all duration-300">
-            <div className="absolute -top-3 right-4 bg-secondary px-4 py-1 rounded-full text-sm font-medium">
-              Only 1 Spot Left
-            </div>
-            <h3 className="text-2xl font-bold mb-2">AI SaaS Growth Accelerator</h3>
-            <p className="text-lg mb-2 h-[48px]">Launch and scale your AI SaaS with expert guidance</p>
-            <div className="mb-6">
-              <span className="line-through text-gray-500 text-xl">$7,999</span>
-              <div className="text-3xl font-bold text-secondary mt-1">$4,999</div>
-              <div className="text-sm text-gray-400 mt-1">For Select Ambitious Founders</div>
-            </div>
-            
-            <div className="space-y-4 mb-8">
-              <div className="pt-4 pb-2">
-                <h4 className="text-lg font-semibold mb-3 text-secondary">Enhanced MVP Development ($14,000 value)</h4>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-secondary mt-0.5" />
-                  <span className="text-gray-300">Everything in the AI SaaS MVP Sprint</span>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-secondary mt-0.5" />
-                  <span className="text-gray-300">Advanced AI features integration & optimization</span>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-secondary mt-0.5" />
-                  <span className="text-gray-300">Premium UI/UX design for better experience</span>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-secondary mt-0.5" />
-                  <span className="text-gray-300">Custom integrations with your tools and CRMs</span>
-                </div>
-              </div>
-
-              <div className="pt-4 pb-2">
-                <h4 className="text-lg font-semibold mb-3 text-secondary">Extended Support & Mentorship ($10,500 value)</h4>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-secondary mt-0.5" />
-                  <span className="text-gray-300">3 months premium technical support</span>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-secondary mt-0.5" />
-                  <div className="flex items-center gap-2">
-                    <span className="text-gray-300">1-on-1 Micro-SaaS success mentorship</span>
-                    <TooltipProvider>
-                      <Tooltip>
-                        <TooltipTrigger>
-                          <Info className="h-4 w-4 text-gray-400 cursor-help" />
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p className="w-[200px]">Access to book strategic calls with our team (2 calls per month) to help guide your development and growth</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-secondary mt-0.5" />
-                  <span className="text-gray-300">Complete business template library for launches</span>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-secondary mt-0.5" />
-                  <div className="flex items-center gap-2">
-                    <span className="text-gray-300">Access to exclusive founder community & support</span>
-                    <TooltipProvider>
-                      <Tooltip>
-                        <TooltipTrigger>
-                          <Info className="h-4 w-4 text-gray-400 cursor-help" />
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p className="w-[200px]">Join our small, exclusive community where founders communicate daily and help each other grow their AI SaaS businesses</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-4 pb-2">
-                <h4 className="text-lg font-semibold mb-3 text-secondary">Our Triple Guarantee (Priceless)</h4>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-secondary mt-0.5" />
-                  <span className="text-gray-300">Guaranteed working product ready for launch</span>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-secondary mt-0.5" />
-                  <span className="text-gray-300">2-3 weeks delivery or money back</span>
-                </div>
-                <div className="flex items-start gap-3 mt-2">
-                  <Check className="h-5 w-5 text-secondary mt-0.5" />
-                  <span className="text-gray-300">100% satisfaction with iterative feedback</span>
-                </div>
-              </div>
-            </div>
-
-            <Button 
-              className="w-full bg-secondary hover:bg-secondary/90"
-              data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
-              data-cal-config='{"layout":"month_view"}'
-            >
-              Book Your Strategy Call
-            </Button>
-          </Card>
+          {tiers.map((tier, index) => (
+            <PricingTier
+              key={index}
+              {...tier}
+              onBookCall={() => {}}
+            />
+          ))}
         </div>
       </div>
     </section>
