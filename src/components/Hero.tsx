@@ -91,7 +91,7 @@ export const Hero = () => {
               data-cal-link="jakubdzikowski/turn-your-ai-vision-into-reality"
               data-cal-config='{"layout":"month_view"}'
             >
-              <Calendar className="mr-2 h-5 w-5" /> Book a Call
+              <Calendar className="mr-2 h-5 w-5" /> Book Strategy Call
             </Button>
             <Button 
               size="lg" 

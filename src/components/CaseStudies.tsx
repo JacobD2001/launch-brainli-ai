@@ -5,7 +5,7 @@ const caseStudies = [
   {
     title: "Brainli.ai",
     description:
-      "My starting point with professional development. Showcased so you know we can deliver a well-designed product.",
+      "Starting point with professional development. Showcased so you know we can deliver a well-designed product.",
     image: "/brainli-case-study.webp",
     tags: ["React", "Gatsby", "JavaScript", "Elevenlabs Assistants"],
     url: "https://brainli.ai/",

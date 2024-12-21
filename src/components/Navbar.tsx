@@ -106,7 +106,7 @@ export const Navbar = () => {
                 data-cal-link="jakubdzikowski/turn-your-ai-vision-into-reality"
                 data-cal-config='{"layout":"month_view"}'
               >
-                Book A Call
+                Book Strategy Call
               </Button>
             </div>
 
@@ -159,7 +159,7 @@ export const Navbar = () => {
                 data-cal-link="jakubdzikowski/turn-your-ai-vision-into-reality"
                 data-cal-config='{"layout":"month_view"}'
               >
-                Book A Call
+                Book Strategy Call
               </Button>
             </div>
           </div>
