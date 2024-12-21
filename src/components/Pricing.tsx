@@ -2,7 +2,12 @@ import { Button } from "./ui/button";
 import { Check, Info } from "lucide-react";
 import { Card } from "./ui/card";
 import { useCalendar } from "@/hooks/useCalendar";
-import { Tooltip } from "./ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./ui/tooltip";
 
 export const Pricing = () => {
   useCalendar();
@@ -14,8 +19,8 @@ export const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-             Choose <span className="text-[#EE2B6C]">Your</span> Path to 
-a Successful AI SaaS
+            Choose <span className="text-[#EE2B6C]">Your</span> Path to 
+            a Successful AI SaaS
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Join ambitious founders who are building the next generation of AI products
@@ -38,7 +43,7 @@ a Successful AI SaaS
             
             <div className="space-y-4 mb-8">
               <div className="pt-4 pb-2">
-                <h4 className="text-lg font-semibold mb-3 text-primary">Fully Functional MVP Development</h4>
+                <h4 className="text-lg font-semibold mb-3 text-primary">Fully Functional MVP Development ($8,500 value)</h4>
                 <div className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-primary mt-0.5" />
                   <span className="text-gray-300">Complete AI SaaS MVP built in 2-3 weeks</span>
@@ -58,7 +63,7 @@ a Successful AI SaaS
               </div>
 
               <div className="pt-4 pb-2">
-                <h4 className="text-lg font-semibold mb-3 text-primary">Technical Support & Guidance</h4>
+                <h4 className="text-lg font-semibold mb-3 text-primary">Technical Support & Guidance ($5,500 value)</h4>
                 <div className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-primary mt-0.5" />
                   <span className="text-gray-300">2-3 Weeks delivery guarantee or money back</span>
@@ -78,7 +83,7 @@ a Successful AI SaaS
               </div>
 
               <div className="pt-4 pb-2">
-                <h4 className="text-lg font-semibold mb-3 text-primary">Our Triple Guarantee</h4>
+                <h4 className="text-lg font-semibold mb-3 text-primary">Our Triple Guarantee (Priceless)</h4>
                 <div className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-primary mt-0.5" />
                   <span className="text-gray-300">Guaranteed working product ready for launch</span>
@@ -109,7 +114,7 @@ a Successful AI SaaS
               Only 1 Spot Left
             </div>
             <h3 className="text-2xl font-bold mb-2">AI SaaS Growth Accelerator</h3>
-            <p className="text-lg mb-2">Launch in 3 weeks and grow your SaaS on user feedback</p>
+            <p className="text-lg mb-2 h-[48px]">Launch and scale your AI SaaS with expert guidance</p>
             <div className="mb-6">
               <span className="line-through text-gray-500 text-xl">$7,999</span>
               <div className="text-3xl font-bold text-secondary mt-1">$4,999</div>
@@ -147,9 +152,16 @@ a Successful AI SaaS
                   <Check className="h-5 w-5 text-secondary mt-0.5" />
                   <div className="flex items-center gap-2">
                     <span className="text-gray-300">1-on-1 Micro-SaaS success mentorship</span>
-                    <Tooltip content="Access to book strategic calls with our team (2 calls per month) to help guide your development and growth">
-                      <Info className="h-4 w-4 text-gray-400 cursor-help" />
-                    </Tooltip>
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger>
+                          <Info className="h-4 w-4 text-gray-400 cursor-help" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p className="w-[200px]">Access to book strategic calls with our team (2 calls per month) to help guide your development and growth</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 mt-2">
@@ -158,12 +170,24 @@ a Successful AI SaaS
                 </div>
                 <div className="flex items-start gap-3 mt-2">
                   <Check className="h-5 w-5 text-secondary mt-0.5" />
-                  <span className="text-gray-300">Access to exclusive founder community & support</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-gray-300">Access to exclusive founder community & support</span>
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger>
+                          <Info className="h-4 w-4 text-gray-400 cursor-help" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p className="w-[200px]">Join our small, exclusive community where founders communicate daily and help each other grow their AI SaaS businesses</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </div>
                 </div>
               </div>
 
               <div className="pt-4 pb-2">
-                <h4 className="text-lg font-semibold mb-3 text-secondary">Our Triple Guarantee</h4>
+                <h4 className="text-lg font-semibold mb-3 text-secondary">Our Triple Guarantee (Priceless)</h4>
                 <div className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-secondary mt-0.5" />
                   <span className="text-gray-300">Guaranteed working product ready for launch</span>
