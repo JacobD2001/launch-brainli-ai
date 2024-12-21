@@ -59,7 +59,7 @@ export const Pricing = () => {
           value: "$7,200 value",
           items: [
             { text: "Everything in the AI SaaS MVP Sprint" },
-            { text: "Advanced AI features integration & optimization" },
+            { text: "SEO optimization and analytics" },
             { text: "Premium UI/UX design for better experience" },
             { text: "Custom integrations with your tools and CRMs" },
           ],
