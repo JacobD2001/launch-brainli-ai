@@ -5,6 +5,14 @@ import { ParticleBackground } from "./ParticleBackground";
 import { useCalendar } from "@/hooks/useCalendar";
 import { RocketAnimation } from "./RocketAnimation";
 
+declare global {
+  interface Window {
+    Tally: {
+      openPopup: (formId: string, options?: any) => void;
+    };
+  }
+}
+
 export const Hero = () => {
   const [text, setText] = useState("");
   const fullText = "Fast.";
@@ -39,6 +47,21 @@ export const Hero = () => {
     startTyping();
   }, []);
 
+  const handleVisionShare = () => {
+    window.Tally.openPopup('mB8Jd5', {
+      layout: 'modal',
+      width: 700,
+      emoji: {
+        text: '🚀',
+        animation: 'wave'
+      },
+      autoClose: 500,
+      onSubmit: () => {
+        console.log('Form submitted successfully');
+      }
+    });
+  };
+
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-16">
       <ParticleBackground />
@@ -65,7 +88,7 @@ export const Hero = () => {
             <Button 
               size="lg" 
               className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white w-full sm:w-auto text-base py-5"
-              data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
+              data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-business"
               data-cal-config='{"layout":"month_view"}'
             >
               <Calendar className="mr-2 h-5 w-5" /> Book a Call
@@ -74,7 +97,7 @@ export const Hero = () => {
               size="lg" 
               variant="outline" 
               className="border-white/20 hover:bg-white/5 text-white w-full sm:w-auto text-base py-5"
-              onClick={() => window.open('https://app.formbricks.com/s/t11dl0yfcf6as0p991dgvpag', '_blank')}
+              onClick={handleVisionShare}
             >
               <FileText className="mr-2 h-5 w-5" /> Share Your Vision
             </Button>
