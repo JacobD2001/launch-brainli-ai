@@ -16,7 +16,7 @@ export const Pricing = () => {
       features: [
         {
           title: "Fully Functional MVP Development",
-          value: "$8,500 value",
+          value: "$4,100 value",
           items: [
             { text: "Complete AI SaaS MVP built in 2-3 weeks" },
             { text: "Web app/mobile app with modern UI" },
@@ -26,7 +26,7 @@ export const Pricing = () => {
         },
         {
           title: "Technical Support & Guidance",
-          value: "$5,500 value",
+          value: "$2,800 value",
           items: [
             { text: "2-3 Weeks delivery guarantee or money back" },
             { text: "Step-by-step launch checklist for success" },
@@ -56,7 +56,7 @@ export const Pricing = () => {
       features: [
         {
           title: "Enhanced MVP Development",
-          value: "$14,000 value",
+          value: "$7,200 value",
           items: [
             { text: "Everything in the AI SaaS MVP Sprint" },
             { text: "Advanced AI features integration & optimization" },
@@ -66,7 +66,7 @@ export const Pricing = () => {
         },
         {
           title: "Extended Support & Mentorship",
-          value: "$10,500 value",
+          value: "$5,300 value",
           items: [
             { text: "3 months premium technical support" },
             { 

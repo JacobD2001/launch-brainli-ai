@@ -19,8 +19,9 @@ export const PricingFeatureSection = ({
 }: PricingFeatureSectionProps) => {
   return (
     <div className="pt-4 pb-2">
-      <h4 className={`text-lg font-semibold mb-3 text-${color}`}>
-        {title} <span className="text-gray-400">({value})</span>
+      <h4 className="text-lg font-semibold mb-3">
+        <span className={`text-${color}`}>{title}</span>{" "}
+        <span className="text-gray-400">({value})</span>
       </h4>
       {items.map((item, index) => (
         <div key={index} className="flex items-start gap-3 mt-2">
