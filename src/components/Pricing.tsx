@@ -13,7 +13,7 @@ export const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Transform Your <span className="text-[#2A4BEE]">AI Vision</span> Into Reality
+            Transform Your <span className="text-[#EE2B6C]">AI Vision</span> Into Reality
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Join ambitious founders who are building the next generation of AI products
