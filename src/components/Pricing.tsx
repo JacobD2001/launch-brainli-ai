@@ -7,13 +7,13 @@ export const Pricing = () => {
   useCalendar();
 
   return (
-    <section className="relative py-20 overflow-hidden bg-black">
+    <section id="pricing" className="relative py-20 overflow-hidden bg-black">
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
       
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
-            Choose Your Path to a Successful AI SaaS
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Choose <span className="text-[#2A4BEE]">Your</span> Path to a Successful AI SaaS
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Transform your AI idea into a successful SaaS product with our expert guidance and development services
@@ -24,21 +24,27 @@ export const Pricing = () => {
           {/* MVP Launchpad Tier */}
           <Card className="relative p-8 bg-black border border-white/10 rounded-xl hover:border-white/20 transition-all duration-300">
             <div className="absolute -top-3 right-4 bg-primary px-4 py-1 rounded-full text-sm font-medium">
-              Limited Time Offer
+              Temporarily Free - 1 Spot Left
             </div>
             <h3 className="text-2xl font-bold mb-2">MVP Launchpad</h3>
             <div className="mb-6">
-              <span className="line-through text-gray-500 text-xl">$7,000</span>
+              <span className="line-through text-gray-500 text-xl">$2,999</span>
               <div className="text-3xl font-bold text-primary mt-1">FREE</div>
-              <div className="text-sm text-gray-400 mt-1">(Limited Spots Available)</div>
+              <div className="text-sm text-gray-400 mt-1">For Our First Client</div>
             </div>
             
             <div className="space-y-4 mb-8">
               {[
-                "Core AI SaaS MVP Development",
+                "Fully Functional MVP with One Key Feature",
+                "Complete Payment Integration (Stripe)",
+                "Professional Landing Page",
+                "User Authentication System",
+                "Basic Admin Dashboard",
+                "2-3 Weeks Guaranteed Delivery",
+                "Money-Back Guarantee if Exceeding Timeline",
+                "Essential Launch Template (Step-by-Step Launch Checklist)",
                 "1 Month Technical Support Post-Launch",
-                'One "Quick-Start" Strategy Call',
-                "Essential Launch Template"
+                'One "Quick-Start" Strategy Call'
               ].map((feature, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-primary mt-0.5" />
@@ -59,18 +65,25 @@ export const Pricing = () => {
           {/* AI SaaS Launch Accelerator Tier */}
           <Card className="relative p-8 bg-gradient-to-b from-black to-secondary/10 border border-white/20 rounded-xl hover:border-white/30 transition-all duration-300">
             <div className="absolute -top-3 right-4 bg-secondary px-4 py-1 rounded-full text-sm font-medium">
-              Most Popular
+              Temporarily Free - 1 Spot Left
             </div>
             <h3 className="text-2xl font-bold mb-2">AI SaaS Launch Accelerator</h3>
             <div className="mb-6">
-              <span className="line-through text-gray-500 text-xl">$15,000</span>
+              <span className="line-through text-gray-500 text-xl">$4,999</span>
               <div className="text-3xl font-bold text-secondary mt-1">FREE</div>
-              <div className="text-sm text-gray-400 mt-1">(Limited Spots Available)</div>
+              <div className="text-sm text-gray-400 mt-1">For Our First Premium Client</div>
             </div>
             
             <div className="space-y-4 mb-8">
               {[
                 "Everything in the MVP Launchpad Tier",
+                "Advanced AI Feature Integration",
+                "Enhanced UI/UX Design",
+                "Premium Landing Page with A/B Testing",
+                "Advanced Analytics Dashboard",
+                "Email Marketing Integration",
+                "2-3 Weeks Guaranteed Delivery",
+                "Money-Back Guarantee if Exceeding Timeline",
                 "3 Months Technical Support Post-Launch",
                 "Ongoing 1-on-1 Micro-SaaS Coaching & Mentorship",
                 "Customized 'Ultimate Launch Strategy' Plan",
