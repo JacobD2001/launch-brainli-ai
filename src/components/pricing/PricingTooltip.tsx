@@ -12,13 +12,13 @@ interface PricingTooltipProps {
 
 export const PricingTooltip = ({ content }: PricingTooltipProps) => {
   return (
-    <TooltipProvider delayDuration={0}>
+    <TooltipProvider>
       <Tooltip>
         <TooltipTrigger>
           <Info className="h-4 w-4 text-gray-400 cursor-help" />
         </TooltipTrigger>
-        <TooltipContent className="bg-white/90 text-black border border-gray-200">
-          <p className="w-[200px]">{content}</p>
+        <TooltipContent className="bg-white text-black border border-gray-200 shadow-lg">
+          <p className="w-[200px] text-sm">{content}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
