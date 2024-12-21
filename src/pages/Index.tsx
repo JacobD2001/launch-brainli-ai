@@ -5,6 +5,7 @@ import { Features } from "@/components/Features";
 import { Team } from "@/components/Team";
 import { CTA } from "@/components/CTA";
 import { Navbar } from "@/components/Navbar";
+import { Pricing } from "@/components/Pricing";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <div id="work">
         <CaseStudies />
       </div>
+      <Pricing />
       <div id="team">
         <Team />
       </div>
