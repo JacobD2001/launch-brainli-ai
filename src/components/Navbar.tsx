@@ -103,7 +103,7 @@ export const Navbar = () => {
               </button>
               <Button
                 className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white"
-                data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
+                data-cal-link="jakubdzikowski/turn-your-ai-vision-into-reality"
                 data-cal-config='{"layout":"month_view"}'
               >
                 Book A Call
@@ -156,7 +156,7 @@ export const Navbar = () => {
               </button>
               <Button
                 className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white w-full"
-                data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
+                data-cal-link="jakubdzikowski/turn-your-ai-vision-into-reality"
                 data-cal-config='{"layout":"month_view"}'
               >
                 Book A Call

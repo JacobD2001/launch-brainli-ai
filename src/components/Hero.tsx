@@ -88,7 +88,7 @@ export const Hero = () => {
             <Button 
               size="lg" 
               className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white w-full sm:w-auto text-base py-5"
-              data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-business"
+              data-cal-link="jakubdzikowski/turn-your-ai-vision-into-reality"
               data-cal-config='{"layout":"month_view"}'
             >
               <Calendar className="mr-2 h-5 w-5" /> Book a Call

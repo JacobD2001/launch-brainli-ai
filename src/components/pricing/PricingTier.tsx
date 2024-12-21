@@ -69,7 +69,7 @@ export const PricingTier = ({
 
       <Button 
         className={`w-full bg-${color} hover:bg-${color}/90`}
-        data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
+        data-cal-link="jakubdzikowski/turn-your-ai-vision-into-reality"
         data-cal-config='{"layout":"month_view"}'
         onClick={onBookCall}
       >

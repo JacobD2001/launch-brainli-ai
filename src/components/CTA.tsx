@@ -29,7 +29,7 @@ export const CTA = () => {
           <Button
             size="lg"
             className="bg-[#EE2B6C] hover:bg-[#EE2B6C]/90 text-white"
-            data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
+            data-cal-link="jakubdzikowski/turn-your-ai-vision-into-reality"
             data-cal-config='{"layout":"month_view"}'
           >
             <Calendar className="mr-2 h-4 w-4" /> Book Your Strategy Call
