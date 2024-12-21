@@ -81,7 +81,7 @@ export const Hero = () => {
           </div>
           <div className="inline-block bg-[#EE2B6C]/10 border border-[#EE2B6C]/20 rounded-full px-5 py-1.5">
             <p className="text-sm md:text-base text-[#EE2B6C]">
-              🔥 Limited Availability: Only 2 spots left for December
+              🔥 Limited Availability: Only 2 spots left for January
             </p>
           </div>
         </div>

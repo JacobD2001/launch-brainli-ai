@@ -23,7 +23,7 @@ export const CTA = () => {
           Ready to Build <span className="text-[#EE2B6C]">Your</span> AI Product?
         </h2>
         <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
-          Turn your idea into a revenue-generating AI product. Schedule a free consultation now.
+          Turn your idea into a revenue-generating AI product. Schedule a free strategy call now.
         </p>
         <div className="flex flex-col items-center gap-4">
           <Button
@@ -32,7 +32,7 @@ export const CTA = () => {
             data-cal-link="jakubdzikowski/free-ai-audit-implement-ai-in-your-business"
             data-cal-config='{"layout":"month_view"}'
           >
-            <Calendar className="mr-2 h-4 w-4" /> Book Your Free Consultation
+            <Calendar className="mr-2 h-4 w-4" /> Book Your Strategy Call
           </Button>
           <p className="text-sm text-white/50">
             No commitment required. Explore your idea today.
