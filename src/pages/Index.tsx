@@ -6,12 +6,14 @@ import { Team } from "@/components/Team";
 import { CTA } from "@/components/CTA";
 import { Navbar } from "@/components/Navbar";
 import { Pricing } from "@/components/Pricing";
+import { ProblemsSolutions } from "@/components/ProblemsSolutions";
 
 const Index = () => {
   return (
     <div className="bg-[#0A0A0F] min-h-screen">
       <Navbar />
       <Hero />
+      <ProblemsSolutions />
       <div id="process">
         <HowItWorks />
       </div>
