@@ -73,7 +73,7 @@ export const Pricing = () => {
               text: "1-on-1 Micro-SaaS success mentorship",
               tooltip: "Access to book strategic calls with our team to help you grow your AI SaaS"
             },
-            { text: "Complete business template library for launches" },
+            { text: "Step-by-step launch template" },
             { 
               text: "Access to exclusive founder community & support from our team",
               tooltip: "Join our small, exclusive community where founders communicate daily and help each other grow their AI SaaS businesses"
