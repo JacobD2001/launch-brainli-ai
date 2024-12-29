@@ -1,7 +1,6 @@
 import { Calendar, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import { ParticleBackground } from "./ParticleBackground";
 import { useCalendar } from "@/hooks/useCalendar";
 import { RocketAnimation } from "./RocketAnimation";
 
@@ -64,9 +63,15 @@ export const Hero = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-16">
-      <ParticleBackground />
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
-      <div className="absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+      {/* Aurora Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -inset-[10px] opacity-50">
+          <div className="absolute top-0 -left-4 w-96 h-96 bg-primary/50 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
+          <div className="absolute top-0 -right-4 w-96 h-96 bg-secondary/50 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
+          <div className="absolute -bottom-8 left-20 w-96 h-96 bg-primary/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" />
+        </div>
+      </div>
+      
       <div className="container relative z-10 mx-auto px-4 animate-fade-up">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
